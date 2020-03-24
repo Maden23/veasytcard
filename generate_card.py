@@ -137,7 +137,7 @@ def runAlg(mainText, tagline, siteAddress, phone, mail, logoPath, finalPath):
     textColor = (color[almostMaxNum][0], color[almostMaxNum][1] , color[almostMaxNum][2])
 
     inp = random.randint(0, 1)
-
+    # inp = 0
     if inp == 0:
         #-------------------------------------------------------------------------------Sample1-----------------------------------------------------------------------------
         image = Image.open(path / "Samples" / "Sample2.png") #Открываем изображение. 
@@ -215,7 +215,7 @@ def runAlg(mainText, tagline, siteAddress, phone, mail, logoPath, finalPath):
         elif siteAddress.find("www.") >= 0:
             txt = siteAddress.replace("www.", "")
 
-        font_size = 36
+        font_size = 28
         font = ImageFont.truetype(str(path / 'Fonts' / 'trebuc.ttf'), size=font_size)
         wSite, hSite = draw.textsize(txt, font=font)
 
