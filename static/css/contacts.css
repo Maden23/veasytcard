@@ -1,3 +1,16 @@
+html,
+body {
+  min-height: 100vh;
+}
+
 p{
 	color: #7c7c7d;
 }
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #323232;
+	min-height: 80px;
+  }

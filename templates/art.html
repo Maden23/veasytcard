@@ -1,108 +1,21 @@
-<!DOCTYPE html>
-<HTML>
-<head>
-  <title>VEASYT CARD</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Marck+Script|Neucha|Nunito|PT+Sans|Roboto+Slab&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-  <!-- TOP PART -->
-  <div id="top" class="container-fluid">
-    <div class="row row1">
-        <div class="col-sm-8 col1">
-            <img src="images/discount.png">
-            <span id="shipping1">КУПОН НА 200р. ПРИ ЗАКАЗЕ ОТ 2000р.</span><br>
-            <span id="shipping2">Предложение распространяется на все виды визитных карточек.</span>
-        </div>
-        <div class="col-sm-4 col2">
-            <a href="signin.html" class="btn btn-primary" id="login">Вход / Регистрация</a>
-        </div>
-      </div>
-  </div>
+{% extends "template.html" %}
 
-  <!-- HEADER -->
-  <div id="header" class="container-fluid mb-2 mt-2">
-      <div class="row row2">
-        <div class="col-lg-8 col-md-6 col3">
-            <a href="index.html" id="logo" class="ml-3">
-              <img src="images/logo2.png">
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col4">
-          <div class="media">
-              <div class="mr-3 order-2 col6 mb-2 mt-2">
-                <a href="basket.html"><button class="btn btn-primary" type="button"><img src="images/cart.png"></button></a>
-              </div>
-            <div class="media-body order-1">
-              <div id="phone">
-                  <img src="images/phone.png" id="tel"><span id="num">  800-2345-6789</span><br>
-                  <span id="time">Часы работы: 6:00 - 16:00 ПН - ЧТ</span><br><span id="time"> 6:00 - 15:00 ПТ</span>
-                </div>
-              </div>      
-            </div>
-        </div>
-      </div>
-  </div>
+{% block title %}Искусство({% endblock %}
 
-  <!-- MAIN BACKGROUND -->
-  <div class="container-fluid pt-2 pb-2" id="bgnd">
-    <!-- NAVIGATION -->
-    <div class="container cont1">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <span class="navbar-brand" href="#"></span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+{% block head %}
+	{{ super() }}
+	<!-- Если надо добавить свой css -->
+  <!-- <link rel="stylesheet" type="text/css" href="static/css/ДРУГОЙ.css"> -->
+  <link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+{% endblock %}
 
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Главная</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Примеры работ</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="auto.html">Авто</a>
-                  <a class="dropdown-item" href="estate.html">Недвижимость</a>
-                  <a class="dropdown-item" href="education.html">Образование</a>
-                  <a class="dropdown-item" href="art.html">Искусство</a>
-                  <a class="dropdown-item" href="sport.html">Спорт</a>
-                  <a class="dropdown-item" href="shopping.html">Шоппинг</a>
-              </div>
-           </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">О нас</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакты</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prices.html">Цены</a>
-            </li>
-          </ul>
-          <div id="search">
-            <form class="form-inline">
-              <input class="form-control" type="text">
-              <button class="btn" type="submit"></button>
-          </form>
-        </div>
-        </div>
-    </nav>
-    </div>
-  </div>
+{% block content %}
 
 	<!-- MAIN BODY -->
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Примеры работы алгоритма</h1>
+          <h1 class="jumbotron-heading">Примеры дизайна визиток</h1>
           <p class="lead text-muted">Категория: искусство</p>
           <p>
             <a href="#" class="btn btn-dark my-2">Предыдущая категория</a>
@@ -117,7 +30,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" height="250vw" src="images/art1.jpg" alt="Card image cap">
+                <img class="card-img-top" height="250vw" src="/static/images/art1.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Print Do</p>
                   <p class="card-text">www.printdo.org</p>
@@ -133,7 +46,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" height="250vw" src="images/art2.jpg" alt="Card image cap">
+                <img class="card-img-top" height="250vw" src="/static/images/art2.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Juliana Bradley</p>
                   <p class="card-text">www.julianabradley.org</p>
@@ -149,7 +62,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" height="250vw" src="images/art3.jpg" alt="Card image cap">
+                <img class="card-img-top" height="250vw" src="/static/images/art3.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Mario Ray</p>
                   <p class="card-text">www.marioray.net</p>
@@ -166,7 +79,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" height="250vw" src="images/art4.jpg" alt="Card image cap">
+                <img class="card-img-top" height="250vw" src="/static/images/art4.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Марина Бирюкова</p>
                   <p class="card-text">www.biryukovamary.ru</p>
@@ -182,7 +95,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" height="250vw" src="images/art5.jpg" alt="Card image cap">
+                <img class="card-img-top" height="250vw" src="/static/images/art5.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Impressions! Art</p>
                   <p class="card-text">www.impressionsart.com</p>
@@ -198,7 +111,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" height="250vw" src="images/art6.jpg" alt="Card image cap">
+                <img class="card-img-top" height="250vw" src="/static/images/art6.jpg" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">Blue Bottle</p>
                   <p class="card-text">www.bluebottle.com</p>
@@ -216,29 +129,4 @@
         </div>
       </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-
-
-	<!-- FOOTER -->
-	<div id="footer" class="container-fluid">
-  		<div class="row row5">
-    		<div class="col-sm-6 cpy">
-      			<div id="copyright">
-      				<p><b>&copy;</b> VEASYT CARD 2019<p>
-      			</div>
-    		</div>
-    		<div class="col-sm-6 cntcs">
-  				<span><b>ТЕЛЕФОН:</b> 800-2345-6789</span><br>
-  				<span><b>EMAIL:</b> blow.mind.tech@gmail.com</span>
-    		</div>
-  		</div>
-	</div>
-</body>
-</HTML>
+{% endblock %}

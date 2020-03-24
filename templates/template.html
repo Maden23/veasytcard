@@ -11,7 +11,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Marck+Script|Neucha|Nunito|PT+Sans|Roboto+Slab&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 
 	{% endblock %}
 </head>
@@ -26,7 +26,7 @@
       			<span id="shipping2">Предложение распространяется на все виды визитных карточек.</span>
     		</div>
     		<div class="col-sm-4 col2">
-      			<a href="signin.html" class="btn btn-primary" id="login">Вход / Регистрация</a>
+      			<a href="/signin/" class="btn btn-primary" id="login">Вход / Регистрация</a>
     		</div>
   		</div>
 	</div>
@@ -35,14 +35,14 @@
 	<div id="header" class="container-fluid mb-2 mt-2">
   		<div class="row row2">
     		<div class="col-lg-8 col-md-6 col3">
-      			<a href="index.html" id="logo" class="ml-3">
+      			<a href="/" id="logo" class="ml-3">
       				<img src="/static/images/logo2.png">
       			</a>
     		</div>
     		<div class="col-lg-4 col-md-6 col4">
     			<div class="media">
 		      		<div class="mr-3 order-2 col6 mb-2 mt-2">
-      					<a href="basket.html"><button class="btn btn-primary" type="button"><img src="/static/images/cart.png"></button></a>
+      					<a href="/basket/"><button class="btn btn-primary" type="button"><img src="/static/images/cart.png"></button></a>
       				</div>
     				<div class="media-body order-1">
 		    			<div id="phone">
@@ -69,27 +69,27 @@
 	  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    		<ul class="navbar-nav mr-auto">
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="index.html">Главная</a>
+	        		<a class="nav-link" href="/">Главная</a>
 	      		</li>
 	      		<li class="nav-item dropdown">
 	        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Примеры работ</a>
 	        		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          			<a class="dropdown-item" href="auto.html">Авто</a>
-	          			<a class="dropdown-item" href="estate.html">Недвижимость</a>
-	          			<a class="dropdown-item" href="education.html">Образование</a>
-	          			<a class="dropdown-item" href="art.html">Искусство</a>
-	          			<a class="dropdown-item" href="sport.html">Спорт</a>
-	          			<a class="dropdown-item" href="shopping.html">Шоппинг</a>
+	          			<a class="dropdown-item" href="/categories/auto/">Авто</a>
+	          			<a class="dropdown-item" href="/categories/estate">Недвижимость</a>
+	          			<a class="dropdown-item" href="/categories/education">Образование</a>
+	          			<a class="dropdown-item" href="/categories/art">Искусство</a>
+	          			<a class="dropdown-item" href="/categories/sport">Спорт</a>
+	          			<a class="dropdown-item" href="/categories/shopping">Шоппинг</a>
 	        		</div>
 	     		 </li>
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="about.html">О нас</a>
+	        		<a class="nav-link" href="/about/">О нас</a>
 	      		</li>
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="contacts.html">Контакты</a>
+	        		<a class="nav-link" href="/contacts/">Контакты</a>
 	      		</li>
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="prices.html">Цены</a>
+	        		<a class="nav-link" href="/prices/">Цены</a>
 	      		</li>
 	    		</ul>
 	    		<div id="search">
@@ -110,7 +110,7 @@
   		<div class="row row5">
     		<div class="col-sm-6 cpy">
       			<div id="copyright">
-      				<p><b>&copy;</b> VEASYT CARD 2019<p>
+      				<p><b>&copy;</b> VEASYT CARD 2019-2020	<p>
       			</div>
     		</div>
     		<div class="col-sm-6 cntcs">

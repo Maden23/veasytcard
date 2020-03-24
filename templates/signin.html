@@ -1,93 +1,25 @@
-<!DOCTYPE html>
-<HTML>
-<head>
-	<title>VEASYT CARD</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<link href="https://fonts.googleapis.com/css?family=Marck+Script|Neucha|Nunito|PT+Sans|Roboto+Slab&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="signin.css">
-</head>
+{% extends "template.html" %}
 
-<body>
-	<!-- MAIN BACKGROUND -->
-  <div class="container-fluid pt-2 pb-2" id="bgnd">
-    <!-- NAVIGATION -->
-    <div class="container cont1">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <span class="navbar-brand" href="#"></span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+{% block title %}Войти{% endblock %}
 
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Главная</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Примеры работ</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="auto.html">Авто</a>
-                  <a class="dropdown-item" href="estate.html">Недвижимость</a>
-                  <a class="dropdown-item" href="education.html">Образование</a>
-                  <a class="dropdown-item" href="art.html">Искусство</a>
-                  <a class="dropdown-item" href="sport.html">Спорт</a>
-                  <a class="dropdown-item" href="shopping.html">Шоппинг</a>
-              </div>
-           </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">О нас</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакты</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prices.html">Цены</a>
-            </li>
-          </ul>
-          <div id="search">
-            <form class="form-inline">
-              <input class="form-control" type="text">
-              <button class="btn" type="submit"></button>
-          </form>
-        </div>
-        </div>
-    </nav>
-    </div>
-  </div>
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+{% endblock %}
+
+{% block content %}
+
 
 <!-- FORM -->
-	<form class="form-signin">
-      <img class="mb-4 text-center" src="images/logo2.png" alt="" width="300">
-      <h1 class="h3 mb-3 font-weight-normal text-center">Вход в личный кабинет</h1>
-      <label for="inputEmail" class="sr-only">Email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-      <label for="inputPassword" class="sr-only">Пароль</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
-      <a href="dashboard.html" class="btn btn-lg btn-danger btn-block">Войти</button>
-      <a href="signup.html" class="btn btn-dark btn-block mt-2">Создать аккаунт</a>
-    </form>
+<form class="form-signin">
+    <img class="mb-4 text-center" src="/static/images/logo2.png" alt="" width="300">
+    <h1 class="h3 mb-3 font-weight-normal text-center">Вход в личный кабинет</h1>
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+    <label for="inputPassword" class="sr-only">Пароль</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+    <a href="/dashboard/" class="btn btn-lg btn-danger btn-block">Войти</button>
+    <a href="/signup/" class="btn btn-dark btn-block mt-2">Создать аккаунт</a>
+  </form>
 
-
-	<!-- FOOTER -->
-	<div id="footer" class="container-fluid">
-  		<div class="row row5">
-    		<div class="col-sm-6 cpy">
-      			<div id="copyright">
-      				<p><b>&copy;</b> VEASYT CARD 2019<p>
-      			</div>
-    		</div>
-    		<div class="col-sm-6 cntcs">
-  				<span><b>ТЕЛЕФОН:</b> 800-2345-6789</span><br>
-  				<span><b>EMAIL:</b> blow.mind.tech@gmail.com</span>
-    		</div>
-  		</div>
-	</div>
-</body>
-</HTML>
+  {% endblock %}

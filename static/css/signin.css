@@ -1,9 +1,19 @@
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
+}
+
+/* Hide top part and header, keep navigation */
+#top {
+  display: none; 
+}
+
+#header {
+  display: none;
 }
 
 .form-signin {
+  padding-top: 80px;
   width: 100%;
   max-width: 330px;
   padding: 15px;
@@ -37,6 +47,7 @@ body {
 #footer {
   position: absolute;
   bottom: 0;
+  width: 100%;
   background-color: #323232;
   min-height: 80px;
 }

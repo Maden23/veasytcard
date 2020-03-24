@@ -1,0 +1,37 @@
+{% extends "dashboard_template.html" %}
+
+{% block title %}Редактор{% endblock %}
+
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+{% endblock %}
+
+
+{% block sidebar_items %}
+<li class="nav-item">
+  <a class="nav-link" href="/dashboard/info/">
+    <span data-feather="home"></span>
+    Обзор <span class="sr-only"></span>
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link  active" href="/dashboard/editor/">
+    <span data-feather="file">(current)</span>
+    Редактор
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/prices/">
+    <span data-feather="users"></span>
+    Подписка
+  </a>
+</li>
+{% endblock %}
+
+{% block content %}
+  <h1> Ваш результат </h1>
+  <br>
+  <img class="img-fluid rounded-lg mx-auto d-block border border-secondary" height="250vw" width="700vw"src={{ image }} alt="Result">
+</main>
+{% endblock %}

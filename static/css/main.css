@@ -1,3 +1,21 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* LOADING SPINNER */
+div#loading {
+  width: 100%;
+  height: 35px;
+  display: none;
+  background: url(/static/images/loading.gif) no-repeat;
+  cursor: wait;
+}
+
 /* SEARCH FORM */
 #search form {
   border: 1px solid #e5e5e5;
@@ -13,7 +31,7 @@
   cursor: pointer;
 }
 #search button:before {
-  content: url(images/search.png);
+  content: url(/static/images/search.png);
   font-family: FontAwesome;
   font-size: 16px;
   color: #bc1a2f;
